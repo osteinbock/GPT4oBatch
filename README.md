@@ -57,7 +57,7 @@ Potential alternatives:
    find K2SO4_NH4NO3_NaH2PO4_NaNO3 Na3PO4_KBr_KNO3_RbCl NaCl_Na2SO4_KCl_NH4Cl -type f -exec basename {} \; | sort | uniq -d
    ```
 
-12. If no file names are printed after running that command, then move on to step 14. If any file names are printed to your terminal, then run this command, and go back to step 11 after.
+12. If no file names are printed after running that command, then move on to step 13. If any file names are printed to your terminal, then run this command, and go back to step 11 after.
 
    ```
    find K2SO4_NH4NO3_NaH2PO4_NaNO3 Na3PO4_KBr_KNO3_RbCl NaCl_Na2SO4_KCl_NH4Cl -type f -exec basename {} \; | sort | uniq -d | while read filename; do find K2SO4_NH4NO3_NaH2PO4_NaNO3 Na3PO4_KBr_KNO3_RbCl NaCl_Na2SO4_KCl_NH4Cl -type f -name "$filename" -print0 | while IFS= read -r -d '' file; do new_name=$(shuf -i 100000000-999999999 -n 1); mv "$file" "$(dirname "$file")/$new_name.jpg"; exiftool -overwrite_original -ModifyDate="2000:01:01 00:00:00" -CreateDate="2000:01:01 00:00:00" -DateTimeOriginal="2000:01:01 00:00:00" "$(dirname "$file")/$new_name.jpg"; done; done
