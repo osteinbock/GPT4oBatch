@@ -19,14 +19,17 @@ Potential alternatives:
 1. First, navigate to the download page for the images:  [https://www.chem.fsu.edu/~steinbock/saltscapes.php](https://www.chem.fsu.edu/~steinbock/saltscapes.php)
 
 2. Scroll down to the section that says "Downloads", as shown in this image.
+
    ![downloads section](assets/20250121_174005_image.png)
 
 3. Download the first 3 ZIP files (do not download the "Others" file).
 
 4. Create a new, empty folder and move the ZIP files there. It should look similar to the image below.
+
    ![Zipped Files in Folder](assets/zipped_files_in_folder.png)
 
 5. Extract the 3 ZIP files (and, optionally, remove them after extraction) so that your folder now looks like this:
+
    ![Extracted folders](assets/folders_extracted.png)
 
 6. Now, open your terminal.
@@ -64,11 +67,13 @@ Potential alternatives:
    ```
 
 13. Now, all your image files are ready. Create a new folder in your directory with the 3 originally unzipped folders named "scripts".
+
     ![Scripts folder](assets/scripts-folder.png)
 
 14. Download the batch.py file from this repository and move it into the scripts folder.
 
 15. Edit the batch.py file, changing the variable `batch_folder_name` to a name of your choice. Then, make a folder in the scripts folder with the same name. For example, the default name is `4o-mini-5img-re` and the folder looks like the below image.
+
     ![step-15](assets/scripts-interior.png)
 
 16. Also, change `max_requests_per_file` to the necessary number in order to fit within the token limits of the batch API. Note that the maximum file size is 100MB (which corresponds to 53 requests per batch). You will most likely need to lower this number.
