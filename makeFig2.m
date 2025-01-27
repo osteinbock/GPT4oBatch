@@ -1,5 +1,5 @@
 % Script: makeFig2.m
-% 01/19/25 Figure 2 for Deven Bangi's GPT Paper
+% 01/19/25 Figure 2 for Deven Dangi's GPT Paper
 %
 % Reads four CSV files:
 %   data_batch1_mini.csv
